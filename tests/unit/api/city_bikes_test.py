@@ -109,6 +109,7 @@ class TestCityBikes:
         response = self.api.network(by_id="foobar")
 
         get_patch.assert_called_once()
+        # foobar
         assert response == {
             "data": {
                 "network": {
