@@ -108,8 +108,7 @@ class TestCityBikes:
                                                                    get_patch: MagicMock):
         response = self.api.network(by_id="foobar")
 
-        get_patch.assert_called_once()
-        # foobar
+        get_patch.assert_not_called()
         assert response == {
             "data": {
                 "network": {
